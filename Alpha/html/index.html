@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <script src="https://kit.fontawesome.com/781936e601.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="script.js" defer></script>
+
+<body>
+    <div class="container-fluid">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img class="logo" src="images/logo.png" alt="logo" width="150px">
+
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        location
+                    </a>
+                    <div class="nav-item dropdown-menu">
+                        <a class="dropdown-item" href="#">Hyd</a>
+                        <a class="dropdown-item" href="#">Delhi</a>
+                        <a class="dropdown-item" href="#">Mumbai</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Our Project<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Floor plan<sup>New!</sup></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cost Estimator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="how" href="#">How It Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">More!</a>
+                </li>
+                <li><button id="btn"> let's Build</button></li>
+                <i class="fa-solid fa-phone">9553852963</i>
+            </ul>
+        </nav>
+        <div class="slide">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/banner11.png" class="d-block w-100" alt="2" width="1100px" height="420px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Alpgh Groups</h5>
+                            <p>All in one </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/3.png" class="d-block w-100" alt="3" width="1100px" height="420px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/chicago.jpg" class="d-block w-100" alt="1" width="1100px" height="420px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions"
+                    data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions"
+                    data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+        </div>
+        <div id="modalContainer" class="modal-container" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- Your login form HTML code here -->
+                    <div style="padding: 0rem">
+                        <form action="" class="form lets-build-form" autocomplete="off">
+                            <!-- Your form fields here -->
+                            <div class="form__group" style="margin-bottom:0.25rem">
+                                <label for="nameModal" class="form__label">Name*</label><br>
+                                <input type="text" id="nameModal" class="form__field" placeholder="Name*" maxlength="30"
+                                    value="">
+                            </div>
+                            <p class="error-msg"></p>
+                            <div class="form__group" style="margin-bottom:0.25rem">
+                                <label for="phoneModal" class="form__label">Mobile Number*</label><br>
+                                <input type="number" id="phoneModal" class="form__field" placeholder="Phone*" value="">
+                            </div>
+                            <p class="error-msg"></p>
+                            <div class="form__group" style="margin-bottom:0.25rem">
+                                <label for="emailModal" class="form__label">Email</label><br>
+                                <input type="text" id="emailModal" class="form__field" placeholder="Email"
+                                    maxlength="60" value="">
+                            </div>
+                            <p class="error-msg"></p>
+                            <div class="form__group" style="margin-bottom:0.25rem">
+                                <label for="addressModal" class="form__label">Location of your Plot*</label><br>
+                                <input type="text" id="addressModal" class="form__field"
+                                    placeholder="Location of your Plot*" value="">
+                            </div>
+                            <p class="error-msg"></p>
+                            <!-- Close button -->
+                            <button type="button" class="btn btn-secondary" onclick="closeLoginModal()">Close</button>
+                            <!-- Submit button -->
+                            <button type="button" class="btn btn-primary btn-theme btn-lg btn-block"
+                                onclick="saveAndCloseModal()">Submit<span class="icon-arrow-right"></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sevice">
+            <h1>Service</h1>
+            <h3>Flawless construction powered by deep expertise.</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#commercial-construction-form" class="d-block text-center">
+                    <div class="lazyload-wrapper">
+                        <img class="img-fluid colimage" src="images/40.png" alt="Construction for Business">
+                    </div>
+                    <div class="text-center">
+                        <span>Construction for Business</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/bengaluru" class="d-block text-center">
+                    <div class="lazyload-wrapper">
+                        <img class="img colimage" src="images/20.png" alt="House Construction">
+                    </div>
+                    <div class="text-center">
+                        <span>House Construction</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/building-materials-supply" class="d-block text-center">
+                    <div class="lazyload-wrapper">
+                        <img class="img-fluid colimage" src="images/40.png" alt="Building Materials">
+                    </div>
+                    <div class="text-center">
+                        <span>Building Materials</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="servicepack">
+            <div class="ser">
+                <h2>Service</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi quis minima laboriosam ut ad
+                    voluptatibus.</p>
+            </div>
+            <div class="service">
+                <div class="row mb-3 justify-content-center text-left">
+                    <div class="item col-lg-4 col-md-6 col-12 ">
+                        <div class="item-inner shadow-sm">
+                            <div class="image-container"> <a class="item-link" href="#"
+                                    title="Profolio &amp;  Developers">
+                                    <img data-aspectratio="600/375" width="600" height="375" src="images/dar 1.png"
+                                        class="img-fluid wp-post-image lazyloaded" alt="img">
+
+                                    <div class="mask text-center"> <a class="mask-link" href="#"></a>
+                                        <div class="btn-holder"> <a class="btn btn-cta-primary" href="#">View
+                                                Details</a> <a class="btn btn-cta-secondary" href="#"
+                                                target="_blank">Live
+                                                Demo</a></div>
+                                    </div> <span class="label label-new rounded-left">New</span>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-heading position-relative mb-1">
+                                    <h3 class="item-title"><a href="#" title="Profolio &amp;Developers">Profolio
+                                        </a></h3>
+                                    <div class="item-price">$49</div>
+                                </div>
+                                <div class="item-desc"> Bootstrap &amp; Resume
+                                    Developers</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-lg-4 col-md-6 col-12 ">
+                        <div class="item-inner shadow-sm">
+                            <div class="image-container"> <a class="item-link" href="#"
+                                    title="Profolio &amp;  Developers">
+                                    <img data-aspectratio="600/375" width="600" height="375" src="images/dar 1.png"
+                                        class="img-fluid wp-post-image lazyloaded" alt="img">
+
+                                    <div class="mask text-center"> <a class="mask-link" href="#"></a>
+                                        <div class="btn-holder"> <a class="btn btn-cta-primary" href="#">View
+                                                Details</a> <a class="btn btn-cta-secondary" href="#"
+                                                target="_blank">Live
+                                                Demo</a></div>
+                                    </div> <span class="label label-new rounded-left">New</span>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-heading position-relative mb-1">
+                                    <h3 class="item-title"><a href="#" title="Profolio &amp;Developers">Profolio
+                                        </a></h3>
+                                    <div class="item-price">$49</div>
+                                </div>
+                                <div class="item-desc"> Bootstrap &amp; Resume
+                                    Developers</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-lg-4 col-md-6 col-12 ">
+                        <div class="item-inner shadow-sm">
+                            <div class="image-container"> <a class="item-link" href="#"
+                                    title="Profolio &amp;  Developers">
+                                    <img data-aspectratio="600/375" width="600" height="375" src="images/dar 1.png"
+                                        class="img-fluid wp-post-image lazyloaded" alt="img">
+
+                                    <div class="mask text-center"> <a class="mask-link" href="#"></a>
+                                        <div class="btn-holder"> <a class="btn btn-cta-primary" href="#">View
+                                                Details</a> <a class="btn btn-cta-secondary" href="#"
+                                                target="_blank">Live
+                                                Demo</a></div>
+                                    </div> <span class="label label-new rounded-left">New</span>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-heading position-relative mb-1">
+                                    <h3 class="item-title"><a href="#" title="Profolio &amp;Developers">Profolio
+                                        </a></h3>
+                                    <div class="item-price">$49</div>
+                                </div>
+                                <div class="item-desc"> Bootstrap &amp; Resume
+                                    Developers</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <br>
+                <div class="construction">
+                    <h1>We Construct Your Dream Home. <br>You Track Progress On App.</h1><br>
+                    <p style="font-size: 20px;">Track house construction project progress, raise queries, view
+                        inspection
+                        reports and more.</p><br>
+                    <P> <i class="fa-solid fa-circle-check">View packages, floor plans, design recommendations</i></P>
+                    <P> <i class="fa-solid fa-circle-check">View packages, floor plans, design recommendations</i></P>
+                    <P> <i class="fa-solid fa-circle-check">View packages, floor plans, design recommendations</i></P>
+                    <img src="images/Google_Play-Badge-Logo.wine.webp" alt="google" width="200px">
+                    <img src="images/appStore.png" alt="app" width="180px">
+                    <img id="mobile" src="images/offerLandingPageBanner.webp" alt="mobile">
+
+                </div>
+                <br>
+
+                <div class="project">
+
+                    <h2 class="section-title">Our Projects</h2>
+                    <p class="section-subtitle" font-size="20px">From a couple to a large Indian family, we have houses
+                        built
+                        with emotions
+                        for everyone.</p>
+
+                    <div class="wrapper">
+                        <i id="left" class="fa-sharp fa-solid fa-circle-left"></i>
+                        <div class="carousel">
+                            <img src="images/dar 1.png" alt="img" draggable="false">
+                            <img src="images/dar 2.png" alt="img" draggable="false">
+                            <img src="images/dar 1.png" alt="img" draggable="false">
+                            <img src="images/dar 2.png" alt="img" draggable="false">
+                            <img src="images/dar 2.png" alt="img" draggable="false">
+                            <img src="images/dar 1.png" alt="img" draggable="false">
+                            <img src="images/dar 2.png" alt="img" draggable="false">
+                        </div>
+                        <i id="right" class="fa-solid fa-circle-right"></i>
+                    </div>
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-4">
+                            <div class="swiper-slide bb-packages-list__item budget" data-package="4" role="group"
+                                aria-label="4 / 6" style="width: 367.333px;">
+                                <p class="bb-package-selected" style="font-size:0.8rem">Premium Package - ₹2,070/sq.ft
+                                    <span style="font-size:12px">(Incl. GST)</span>
+                                </p>
+                                <div class="accordion" id="accordionExample1" style="margin-bottom:0px">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne1">
+                                            <h2 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                                    data-toggle="collapse" data-target="#collapseOne1"
+                                                    aria-expanded="false" aria-controls="collapseOne1">Designs &amp;
+                                                    Drawings</button></h2>
+                                        </div>
+                                        <div id="collapseOne1" class="collapse " aria-labelledby="headingOne1"
+                                            data-parent="#accordionExample1">
+                                            <div class="card-body">
+                                                <ul class="list">
+                                                    <li class="list-item">3D Elevation</li>
+                                                    <li class="list-item">Architectural Layout | 2D</li>
+                                                    <li class="list-item">Basic Elevation</li>
+                                                    <li class="list-item">Electrical Drawings</li>
+                                                    <li class="list-item">Structural Design</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo1">
+                                            <h2 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                                    data-toggle="collapse" data-target="#collapseTwo1"
+                                                    aria-expanded="false" aria-controls="collapseTwo1">Additional
+                                                    Features</button></h2>
+                                        </div>
+                                        <div id="collapseTwo1" class="collapse " aria-labelledby="headingTwo1"
+                                            data-parent="#accordionExample1">
+                                            <div class="card-body">
+                                                <ul class="list">
+                                                    <li class="list-item">Solar Panels</li>
+                                                    <li class="list-item">Rainwater Harvesting</li>
+                                                    <li class="list-item">Smart Thermostats</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Add more cards as needed -->
+                                </div>
+                                <div class="accordion"
+                                    style="background-color:#fff;padding:0rem 0px 1rem;text-align:center;margin-bottom:0.5rem">
+                                    <hr style="margin:0px">
+                                    <div style="font-size:14px;text-align:center;padding-top:1rem">Get in touch with us!
+                                    </div>
+                                    <div class="btn btn-primary btn-theme btn-lg">LET'S BUILD<span
+                                            class="icon-arrow-right"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-4">
+                            <div class="swiper-slide bb-packages-list__item budget" data-package="6" role="group"
+                                aria-label="6 / 6" style="width: 367.333px;">
+                                <p class="bb-package-selected" style="font-size:0.8rem">Imperia Package - ₹2,390/sq.ft
+                                    <span style="font-size:12px">(Incl. GST)</span>
+                                </p>
+                                <div class="accordion" id="accordionExample2" style="margin-bottom:0px">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne2">
+                                            <h2 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                                    data-toggle="collapse" data-target="#collapseOne2"
+                                                    aria-expanded="false" aria-controls="collapseOne2">Designs &amp;
+                                                    Drawings</button></h2>
+                                        </div>
+                                        <div id="collapseOne2" class="collapse " aria-labelledby="headingOne2"
+                                            data-parent="#accordionExample2">
+                                            <div class="card-body">
+                                                <ul class="list">
+                                                    <li class="list-item">3D Elevation</li>
+                                                    <li class="list-item">Architectural Layout | 2D</li>
+                                                    <li class="list-item">Basic Elevation</li>
+                                                    <li class="list-item">Electrical Drawings</li>
+                                                    <li class="list-item">Furniture Plan</li>
+                                                    <li class="list-item">Plumbing Drawings</li>
+                                                    <li class="list-item">Structural Design</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo2">
+                                            <h2 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                                    data-toggle="collapse" data-target="#collapseTwo2"
+                                                    aria-expanded="false" aria-controls="collapseTwo2">Additional
+                                                    Features</button></h2>
+                                        </div>
+                                        <div id="collapseTwo2" class="collapse " aria-labelledby="headingTwo2"
+                                            data-parent="#accordionExample2">
+                                            <div class="card-body">
+                                                <ul class="list">
+                                                    <li class="list-item">Solar Panels</li>
+                                                    <li class="list-item">Rainwater Harvesting</li>
+                                                    <li class="list-item">Smart Thermostats</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Add more cards as needed -->
+                                </div>
+                                <div class="accordion"
+                                    style="background-color:#fff;padding:0rem 0px 1rem;text-align:center;margin-bottom:0.5rem">
+                                    <hr style="margin:0px">
+                                    <div style="font-size:14px;text-align:center;padding-top:1rem">Get in touch with us!
+                                    </div>
+                                    <div class="btn btn-primary btn-theme btn-lg">LET'S BUILD<span
+                                            class="icon-arrow-right"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-4">
+                            <div class="swiper-slide bb-packages-list__item budget" data-package="6" role="group"
+                                aria-label="6 / 6" style="width: 367.333px;">
+                                <p class="bb-package-selected" style="font-size:0.8rem">Luxury Package - ₹2,690/sq.ft
+                                    <span style="font-size:12px">(Incl. GST)</span>
+                                </p>
+                                <div class="accordion" id="accordionExample3" style="margin-bottom:0px">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne3">
+                                            <h2 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                                    data-toggle="collapse" data-target="#collapseOne3"
+                                                    aria-expanded="false" aria-controls="collapseOne3">Designs &amp;
+                                                    Drawings</button></h2>
+                                        </div>
+                                        <div id="collapseOne3" class="collapse " aria-labelledby="headingOne3"
+                                            data-parent="#accordionExample3">
+                                            <div class="card-body">
+                                                <ul class="list">
+                                                    <li class="list-item">3D Elevation</li>
+                                                    <li class="list-item">Architectural Layout | 2D</li>
+                                                    <li class="list-item">Basic Elevation</li>
+                                                    <li class="list-item">Electrical Drawings</li>
+                                                    <li class="list-item">Furniture Plan</li>
+                                                    <li class="list-item">Plumbing Drawings</li>
+                                                    <li class="list-item">Structural Design</li>
+                                                    <li class="list-item">HVAC Plan</li>
+                                                    <li class="list-item">Home Automation</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo3">
+                                            <h2 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                                    data-toggle="collapse" data-target="#collapseTwo3"
+                                                    aria-expanded="false" aria-controls="collapseTwo3">Additional
+                                                    Features</button></h2>
+                                        </div>
+                                        <div id="collapseTwo3" class="collapse " aria-labelledby="headingTwo3"
+                                            data-parent="#accordionExample3">
+                                            <div class="card-body">
+                                                <ul class="list">
+                                                    <li class="list-item">Solar Panels</li>
+                                                    <li class="list-item">Rainwater Harvesting</li>
+                                                    <li class="list-item">Smart Thermostats</li>
+                                                    <li class="list-item">Home Theater System</li>
+                                                    <li class="list-item">Security System</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Add more cards as needed -->
+                                </div>
+                                <div class="accordion"
+                                    style="background-color:#fff;padding:0rem 0px 1rem;text-align:center;margin-bottom:0.5rem">
+                                    <hr style="margin:0px">
+                                    <div style="font-size:14px;text-align:center;padding-top:1rem">Get in touch with us!
+                                    </div>
+                                    <div class="btn btn-primary btn-theme btn-lg">LET'S BUILD<span
+                                            class="icon-arrow-right"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-navigation">
+                        <div class="swiper-button-next swiper-button-disabled" tabindex="-1" role="button"
+                            aria-label="Next slide" aria-controls="swiper-wrapper-37aadeb7f62631710"
+                            aria-disabled="true">
+                        </div>
+                        <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
+                            aria-label="Previous slide" aria-controls="swiper-wrapper-37aadeb7f62631710"
+                            aria-disabled="true">
+                        </div>
+                    </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+
+
+                    <div class="related-section templates-content-wrapper theme-bg-light py-5">
+
+                        <h3 class="related-section-title text-center">You May Also Like...</h3>
+                        <div class="row justify-content-center">
+                            <div class="item col-6 col-lg-3">
+                                <div class="item-inner h-100 shadow-sm">
+                                    <div class="image-container"><a class="item-link"
+                                            href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/launch-bootstrap-5-template-for-saas-businesses/ "><img
+                                                data-aspectratio="600/375" width="600" height="375"
+                                                src="https://themes.3rdwavemedia.com/wp-content/uploads/2020/03/launch-bootstrap-template-for-saas-businesses.png"
+                                                data-src="https://themes.3rdwavemedia.com/wp-content/uploads/2020/03/launch-bootstrap-template-for-saas-businesses.png"
+                                                class="img-fluid wp-post-image lazyloaded"
+                                                alt="Launch - Bootstrap Template For SaaS Businesses" decoding="async"
+                                                data-srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2020/03/launch-bootstrap-template-for-saas-businesses.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2020/03/launch-bootstrap-template-for-saas-businesses-300x188.png 300w"
+                                                sizes="(max-width: 600px) 100vw, 600px" loading="lazy"
+                                                srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2020/03/launch-bootstrap-template-for-saas-businesses.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2020/03/launch-bootstrap-template-for-saas-businesses-300x188.png 300w"><noscript><img
+                                                    width="600" height="375" data-aspectratio="600/375"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    data-src="https://themes.3rdwavemedia.com/wp-content/uploads/2020/03/launch-bootstrap-template-for-saas-businesses.png"
+                                                    class="img-fluid wp-post-image lazyload"
+                                                    alt="Launch - Bootstrap Template For SaaS Businesses"
+                                                    decoding="async"
+                                                    data-srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2020/03/launch-bootstrap-template-for-saas-businesses.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2020/03/launch-bootstrap-template-for-saas-businesses-300x188.png 300w"
+                                                    sizes="(max-width: 600px) 100vw, 600px" /></noscript></a>
+                                        <div class="mask text-center">
+                                            <div class="btn-holder"><a class="btn btn-cta-primary"
+                                                    href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/launch-bootstrap-5-template-for-saas-businesses/ ">View
+                                                    Details</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-info match-height">
+                                        <h4 class="item-title no-truncate"><a
+                                                href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/launch-bootstrap-5-template-for-saas-businesses/">alpha</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item col-6 col-lg-3">
+                                <div class="item-inner h-100 shadow-sm">
+                                    <div class="image-container"><a class="item-link"
+                                            href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-5-vcard-portfolio-template-for-software-developers/ "><img
+                                                data-aspectratio="600/375" width="600" height="375"
+                                                src="https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/bootstrap-portfolio-theme-for-developers-devcard.png"
+                                                data-src="https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/bootstrap-portfolio-theme-for-developers-devcard.png"
+                                                class="img-fluid wp-post-image lazyloaded"
+                                                alt="bootstrap-portfolio-theme-for-developers-devcard" decoding="async"
+                                                data-srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/bootstrap-portfolio-theme-for-developers-devcard.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/bootstrap-portfolio-theme-for-developers-devcard-300x188.png 300w"
+                                                sizes="(max-width: 600px) 100vw, 600px" loading="lazy"
+                                                srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/bootstrap-portfolio-theme-for-developers-devcard.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/bootstrap-portfolio-theme-for-developers-devcard-300x188.png 300w"><noscript><img
+                                                    width="600" height="375" data-aspectratio="600/375"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    data-src="https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/bootstrap-portfolio-theme-for-developers-devcard.png"
+                                                    class="img-fluid wp-post-image lazyload"
+                                                    alt="bootstrap-portfolio-theme-for-developers-devcard"
+                                                    decoding="async"
+                                                    data-srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/bootstrap-portfolio-theme-for-developers-devcard.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/bootstrap-portfolio-theme-for-developers-devcard-300x188.png 300w"
+                                                    sizes="(max-width: 600px) 100vw, 600px" /></noscript></a>
+                                        <div class="mask text-center">
+                                            <div class="btn-holder"><a class="btn btn-cta-primary"
+                                                    href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-5-vcard-portfolio-template-for-software-developers/ ">View
+                                                    Details</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-info match-height">
+                                        <h4 class="item-title no-truncate"><a
+                                                href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-5-vcard-portfolio-template-for-software-developers/">
+                                                alpha &amp;
+                                                Developers</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item col-6 col-lg-3">
+                                <div class="item-inner h-100 shadow-sm">
+                                    <div class="image-container"><a class="item-link"
+                                            href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/bootstrap-template-for-mobile-apps-nova-pro/ "><img
+                                                data-aspectratio="600/375" width="600" height="375"
+                                                src="https://themes.3rdwavemedia.com/wp-content/uploads/2018/09/bootstrap-template-for-mobile-apps-nova-pro.png"
+                                                data-src="https://themes.3rdwavemedia.com/wp-content/uploads/2018/09/bootstrap-template-for-mobile-apps-nova-pro.png"
+                                                class="img-fluid wp-post-image lazyloaded"
+                                                alt="bootstrap-template-for-mobile-apps-nova-pro" decoding="async"
+                                                data-srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2018/09/bootstrap-template-for-mobile-apps-nova-pro.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2018/09/bootstrap-template-for-mobile-apps-nova-pro-300x188.png 300w"
+                                                sizes="(max-width: 600px) 100vw, 600px" loading="lazy"
+                                                srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2018/09/bootstrap-template-for-mobile-apps-nova-pro.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2018/09/bootstrap-template-for-mobile-apps-nova-pro-300x188.png 300w"><noscript><img
+                                                    width="600" height="375" data-aspectratio="600/375"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    data-src="https://themes.3rdwavemedia.com/wp-content/uploads/2018/09/bootstrap-template-for-mobile-apps-nova-pro.png"
+                                                    class="img-fluid wp-post-image lazyload"
+                                                    alt="bootstrap-template-for-mobile-apps-nova-pro" decoding="async"
+                                                    data-srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2018/09/bootstrap-template-for-mobile-apps-nova-pro.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2018/09/bootstrap-template-for-mobile-apps-nova-pro-300x188.png 300w"
+                                                    sizes="(max-width: 600px) 100vw, 600px" /></noscript></a>
+                                        <div class="mask text-center">
+                                            <div class="btn-holder"><a class="btn btn-cta-primary"
+                                                    href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/bootstrap-template-for-mobile-apps-nova-pro/ ">View
+                                                    Details</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-info match-height">
+                                        <h4 class="item-title no-truncate"><a
+                                                href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/bootstrap-template-for-mobile-apps-nova-pro/">Projects
+                                            </a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item col-6 col-lg-3">
+                                <div class="item-inner h-100 shadow-sm">
+                                    <div class="image-container"><a class="item-link"
+                                            href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-5-startup-template-for-software-projects/ "><img
+                                                data-aspectratio="600/375" width="600" height="375"
+                                                src="https://themes.3rdwavemedia.com/wp-content/uploads/2019/06/bootstrap-startup-template-for-software-projects-coderpro.png"
+                                                data-src="https://themes.3rdwavemedia.com/wp-content/uploads/2019/06/bootstrap-startup-template-for-software-projects-coderpro.png"
+                                                class="img-fluid wp-post-image lazyloaded"
+                                                alt="CoderPro - Bootstrap Startup Template For Software Projects"
+                                                decoding="async"
+                                                data-srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2019/06/bootstrap-startup-template-for-software-projects-coderpro.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2019/06/bootstrap-startup-template-for-software-projects-coderpro-300x188.png 300w"
+                                                sizes="(max-width: 600px) 100vw, 600px" loading="lazy"
+                                                srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2019/06/bootstrap-startup-template-for-software-projects-coderpro.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2019/06/bootstrap-startup-template-for-software-projects-coderpro-300x188.png 300w"><noscript><img
+                                                    width="600" height="375" data-aspectratio="600/375"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    data-src="https://themes.3rdwavemedia.com/wp-content/uploads/2019/06/bootstrap-startup-template-for-software-projects-coderpro.png"
+                                                    class="img-fluid wp-post-image lazyload"
+                                                    alt="CoderPro - Bootstrap Startup Template For Software Projects"
+                                                    decoding="async"
+                                                    data-srcset="https://themes.3rdwavemedia.com/wp-content/uploads/2019/06/bootstrap-startup-template-for-software-projects-coderpro.png 600w, https://themes.3rdwavemedia.com/wp-content/uploads/2019/06/bootstrap-startup-template-for-software-projects-coderpro-300x188.png 300w"
+                                                    sizes="(max-width: 600px) 100vw, 600px" /></noscript></a>
+                                        <div class="mask text-center">
+                                            <div class="btn-holder"><a class="btn btn-cta-primary"
+                                                    href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-5-startup-template-for-software-projects/ ">View
+                                                    Details</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-info match-height">
+                                        <h4 class="item-title no-truncate"><a
+                                                href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-5-startup-template-for-software-projects/">construction
+                                            </a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <script src="js/script.js"></script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+                <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+                    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+                    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+                    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+                    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
